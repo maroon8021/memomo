@@ -1,9 +1,28 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
+import { useStaticQuery, graphql } from "gatsby"
 
 const SEO = ({ title, children }) => {
   const lang = "ja"
+
+  const { site } = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+            description
+            author
+          }
+        }
+      }
+    `
+  )
+
+  const metaDescription = site.siteMetadata.description
+  const keywords: Array<string> = []
+  const meta = ""
 
   return (
     <Helmet

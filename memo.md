@@ -15,3 +15,20 @@ https://dev.to/speshov/how-to-setup-gatsbyjs-starter-with-typescript-eslint-pret
 ## Alias
 
 https://www.gatsbyjs.org/packages/gatsby-plugin-alias-imports/
+↓
+ts だとエラーでるから確認
+https://medium.com/mr-leo/gatsbyjs-series-configure-useful-plugins-and-organize-project-part-2-d3acb0ffff5c
+
+## Fix 'React is not defined'
+
+https://github.com/ChristopherBiscardi/gatsby-mdx/issues/358
+
+↓ いらなかった
+
+```
+options: {
+  isTSX: true, // defaults to false
+  jsxPragma: `jsx`, // defaults to "React"
+  allExtensions: true, // defaults to false
+},
+```
