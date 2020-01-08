@@ -1,14 +1,17 @@
 import * as React from "react"
+import { useState, useEffect } from "react"
+
 import { Link } from "gatsby"
+import Layout from "@s/components/common/layout"
+import Header from "@s/components/common/header"
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
-
-const IndexPage = () => (
-  <div>
-    <div>test</div>
-  </div>
+const IndexPage: React.FC = (): React.ReactElement => (
+  <Layout>
+    <Header />
+    <div>
+      <div>test</div>
+    </div>
+  </Layout>
 )
 
 export default IndexPage

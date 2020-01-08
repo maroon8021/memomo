@@ -1,12 +1,13 @@
 import * as React from "react"
 import PropTypes from "prop-types"
+import SEO from "./seo"
 
-const Layout = ({ children }) => (
+const Layout: React.FC = ({ children }): React.ReactElement => (
   <>
     <SEO title="memomo" lang="ja">
       <meta name="robots" content="noindex" />
     </SEO>
-    <main className="container">{children}</main>
+    <main>{children}</main>
   </>
 )
 

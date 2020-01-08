@@ -18,22 +18,27 @@ module.exports = {
     `gatsby-plugin-emotion`,
     {
       resolve: `gatsby-plugin-typescript`,
-      options: {
-        isTSX: true, // defaults to false
-        jsxPragma: `jsx`, // defaults to "React"
-        allExtensions: true, // defaults to false
-      },
+      options: {},
     },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `memomo`,
+        short_name: `memomo`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/memomo-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: {
+          "@s": "src",
+        },
+        extensions: ["tsx", "png"],
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
