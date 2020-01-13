@@ -1,3 +1,5 @@
+const path = require("path")
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -24,6 +26,14 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-emotion`,
+    {
+      resolve: "gatsby-plugin-scss-typescript",
+      options: {
+        sassLoaderOptions: {
+          includePaths: [path.resolve(__dirname, "./src/scss")],
+        },
+      },
+    },
     {
       resolve: `gatsby-plugin-typescript`,
       options: {},

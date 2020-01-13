@@ -1,6 +1,7 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import SEO from "./seo"
+//import "@s/scss/_reset.scss"
 
 const Layout: React.FC = ({ children }): React.ReactElement => (
   <>

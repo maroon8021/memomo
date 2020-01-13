@@ -32,3 +32,7 @@ options: {
   allExtensions: true, // defaults to false
 },
 ```
+
+### object access by typescript
+
+https://aknow2.hatenablog.com/entry/2018/11/14/143033

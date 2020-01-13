@@ -1,0 +1,77 @@
+//override styles
+$heading-borders: true;
+$custom-colors: true;
+$link: $base_color;
+$link-hover: $base_color;
+
+@import "wysiwyg";
+
+.wysiwyg {
+  & h2 {
+    color: blue;
+  }
+}
+// .article {
+//   & h1,
+//   h2,
+//   h3,
+//   h4,
+//   h5,
+//   p,
+//   li {
+//     color: #363636;
+//     font-size: 1.7rem;
+//     font-weight: 600;
+//     line-height: 1.125;
+//   }
+
+//   & h1:not(:last-child),
+//   h2:not(:last-child),
+//   h3:not(:last-child),
+//   h4:not(:last-child),
+//   h5:not(:last-child),
+//   p:not(:last-child) {
+//     margin-bottom: 1.5rem;
+//   }
+
+//   & h1 {
+//     font-size: 3rem;
+//     text-align: center;
+//   }
+
+//   & h2 {
+//     border-bottom: solid 2px #ebebeb;
+//     font-size: 2rem;
+//     margin-bottom: 2rem;
+//     padding-bottom: 3px;
+//   }
+
+//   & h3 {
+//     font-size: 1.7rem;
+//   }
+
+//   & p {
+//     font-size: 1rem;
+//     font-weight: 300;
+//     line-height: 1.7;
+//   }
+
+//   & ul {
+//     margin: 0.5rem 0;
+
+//     & li {
+//       font-size: 1.4rem;
+//       font-weight: 300;
+//       padding-left: 0.5rem;
+
+//       &::before {
+//         content: "-";
+//         padding-right: 0.5rem;
+//       }
+//     }
+//   }
+
+//   & pre {
+//     margin: 1.5rem 0;
+//   }
+// }
