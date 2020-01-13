@@ -75,6 +75,11 @@ const SEO = ({ title, children }) => {
         )
         .concat(meta)}
     >
+      <link
+        href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap"
+        rel="stylesheet"
+      />
+
       {children}
     </Helmet>
   )

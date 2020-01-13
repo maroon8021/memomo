@@ -13,6 +13,8 @@ const blackColor = "#363636"
 
 const section = css({
   padding: "3rem 1.5rem",
+  maxWidth: "1200px",
+  margin: "0 auto",
 })
 
 const field = css({
@@ -33,7 +35,7 @@ const inputInfo = css({
   lineHeight: 1.5,
   padding: "0.2rem 0.5rem",
   border: "1px solid transparent",
-  "-webkit-appearance": "none",
+  WebkitAppearance: "none",
   backgroundColor: "white",
   borderRadius: "4px",
   color: blackColor,
@@ -41,6 +43,7 @@ const inputInfo = css({
   maxWidth: "100%",
   width: "100%",
   borderColor: blueColor,
+  boxSizing: "border-box",
   ":focus": {
     boxShadow: "0 0 0 0.125em rgba(32, 156, 238, 0.25)",
     outline: "none",

@@ -11,6 +11,8 @@ import "wysiwyg.css"
 /* Styles */
 const section = css({
   padding: "3rem 1.5rem",
+  maxWidth: "1200px",
+  margin: "0 auto",
 })
 
 export default function Template({
