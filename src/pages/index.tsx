@@ -95,38 +95,51 @@ const description = css({
   },
 })
 
-interface articleData {
+interface ArticleData {
   text: string
   title: string
   path: string
   [key: string]: string
 }
 
-let allData: articleData[] = []
+let allData: ArticleData[] = []
+
+const shuffle = ([...targetArray]: any[]): any[] => {
+  for (let i = targetArray.length - 1; i >= 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+
+    // This below is avoiding bug of NOT working "[array[i], array[j]] = [array[j], array[i]]" correctly
+    const temp = targetArray[i]
+    targetArray[i] = targetArray[j]
+    targetArray[j] = temp
+  }
+  return targetArray
+}
 
 const IndexPage: React.FC = (): React.ReactElement => {
-  const [resultList, setResult] = useState<articleData[]>([])
+  const [resultList, setResult] = useState<ArticleData[]>([])
 
   /**
    * https://qiita.com/hikonaz/items/5d2a526a217e05162a0a
    * @param e
    */
+  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
   const onChangeInput = (e: ChangeEvent<HTMLInputElement>) => {
-    let inputtedValue = e.target.value
+    const inputtedValue = e.target.value
     // eslint-disable-next-line no-console
     console.log(inputtedValue)
-    let targetList: articleData[] = []
+    let targetList: ArticleData[] = []
     const targetText = new RegExp(inputtedValue, "g")
 
     if (inputtedValue == null || inputtedValue === "") {
       targetList = allData
     } else {
-      allData.forEach((articleData: articleData) => {
+      allData.forEach((articleData: ArticleData) => {
         if (
           articleData.text.indexOf(inputtedValue) !== -1 ||
           articleData.title.indexOf(inputtedValue) !== -1
         ) {
-          let selectedData = Object.assign({}, articleData)
+          const selectedData = Object.assign({}, articleData)
           Object.entries(selectedData).forEach(([key, value]) => {
             if (key === "title" || key === "text") {
               selectedData[key] = selectedData[key].replace(
@@ -149,7 +162,7 @@ const IndexPage: React.FC = (): React.ReactElement => {
       .then(res => {
         // eslint-disable-next-line no-console
         console.log(res)
-        allData = res.data
+        allData = shuffle(res.data)
         setResult(allData)
       })
       .catch(err => {
@@ -174,7 +187,7 @@ const IndexPage: React.FC = (): React.ReactElement => {
           </div>
         </div>
         <div css={container}>
-          {resultList.map((node: articleData) => (
+          {resultList.map((node: ArticleData) => (
             <div key={node.path} css={linkCard}>
               <Link to={node.path} css={linkCardContent}>
                 <h3
