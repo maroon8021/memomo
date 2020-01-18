@@ -36,3 +36,7 @@ options: {
 ### object access by typescript
 
 https://aknow2.hatenablog.com/entry/2018/11/14/143033
+
+### remove console
+
+https://www.gatsbyjs.org/packages/gatsby-plugin-remove-console/

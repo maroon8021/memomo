@@ -1,6 +1,7 @@
 ---
 path: "/article/how-to-add-github-action"
 date: "2020-01-13"
+title: "Github Action と AWS の設定の仕方"
 ---
 
 # Github Action と AWS の設定の仕方

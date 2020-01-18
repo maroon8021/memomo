@@ -22,7 +22,7 @@ const SEO = ({ title, children }) => {
 
   const metaDescription = site.siteMetadata.description
   const keywords: Array<string> = []
-  const meta = ""
+  const meta = []
 
   return (
     <Helmet

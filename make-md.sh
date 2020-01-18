@@ -19,6 +19,7 @@ echo $TODAY
 echo '---' >> $1.md
 echo 'path: "/article/'$1'"' >> $1.md
 echo 'date: "'`date '+%F'`'"' >> $1.md
+echo 'title: ""' >> $1.md
 echo '---' >> $1.md
 
 echo $1.md 'is created completely'

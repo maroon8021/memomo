@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import { css, jsx } from "@emotion/core"
 import Layout from "@s/components/common/layout"
 import Header from "@s/components/common/header"
+import SEO from "@s/components/common/seo"
 
 //import "@s/scss/article.scss"
 import "wysiwyg.css"
@@ -19,9 +20,12 @@ export default function Template({
   data, // this prop will be injected by the GraphQL query below.
 }) {
   const { markdownRemark } = data // data.markdownRemark holds our post data
-  const { html } = markdownRemark
+  const { html, frontmatter } = markdownRemark
   return (
     <Layout>
+      <SEO title={frontmatter.title} lang="ja">
+        <meta name="robots" content="noindex" />
+      </SEO>
       <Header />
       <div css={section}>
         <div className="wysiwyg" dangerouslySetInnerHTML={{ __html: html }} />

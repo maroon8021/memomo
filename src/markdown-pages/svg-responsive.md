@@ -1,6 +1,7 @@
 ---
 path: "/article/svg-responsive"
 date: "2019-07-04"
+title: "SVG のレスポンシブ対応について"
 ---
 
 # SVG のレスポンシブ対応について

@@ -1,6 +1,7 @@
 ---
 path: "/article/php-simple-server"
 date: "2019-07-10"
+title: "VScode で php の簡単なサーバーをたてる方法"
 ---
 
 # VScode で php の簡単なサーバーをたてる方法

@@ -1,6 +1,7 @@
 ---
 path: "/article/write-sh-file-for-making-md"
 date: "2019-07-04"
+title: "ShellScript から特定の内容を記載した md ファイルを作成できるようにした"
 ---
 
 # ShellScript から特定の内容を記載した md ファイルを作成できるようにした
