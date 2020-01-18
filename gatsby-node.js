@@ -10,6 +10,8 @@
 const path = require(`path`)
 const fs = require(`fs`)
 
+const staticDir = "static"
+
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
@@ -37,18 +39,15 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(result.errors)
     }
 
-    console.log("showing result")
-    console.log(JSON.stringify(result))
-    const count = result.data.allMarkdownRemark.edges.length
+    const articleCount = result.data.allMarkdownRemark.edges.length
     const textData = []
     return result.data.allMarkdownRemark.edges.forEach(({ node }, index) => {
-      console.log("log is shown")
-      console.log(JSON.stringify(node))
       createPage({
         path: node.frontmatter.path,
         component: blogPostTemplate,
         context: {}, // additional data can be passed via context
       })
+
       let title = node.html.match(/<h1>.+<\/h1>/g)[0]
       title = title.replace(/<.{1,5}>/g, "")
       let text = node.html.replace(/<h1>.+<\/h1>/g, "")
@@ -60,11 +59,25 @@ exports.createPages = ({ actions, graphql }) => {
         title,
         text,
       })
-      if (count === index + 1) {
-        fs.writeFile("static/data.json", JSON.stringify(textData), err => {
-          if (err) console.log(err)
-          else console.log("write end")
-        })
+
+      // Check whether last index or not
+      if (articleCount === index + 1) {
+        try {
+          fs.accessSync(staticDir, fs.constants.R_OK | fs.constants.W_OK)
+        } catch (error) {
+          console.log(`${staticDir} folder does not exist`)
+          fs.mkdirSync(staticDir)
+          console.log(`${staticDir} folder has created`)
+        }
+
+        fs.writeFile(
+          `${staticDir}/data.json`,
+          JSON.stringify(textData),
+          err => {
+            if (err) console.log(err)
+            else console.log("write end")
+          }
+        )
       }
     })
   })

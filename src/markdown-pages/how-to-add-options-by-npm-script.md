@@ -1,6 +1,7 @@
 ---
 path: "/article/how-to-add-options-by-npm-script"
 date: "2019-07-04"
+title: "どうやったら npm-script に引数を渡せるのか"
 ---
 
 # どうやったら npm-script に引数を渡せるのか

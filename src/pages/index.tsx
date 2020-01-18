@@ -6,6 +6,7 @@ import { css, jsx, keyframes } from "@emotion/core"
 import axios from "axios"
 import Layout from "@s/components/common/layout"
 import Header from "@s/components/common/header"
+import SEO from "@s/components/common/seo"
 
 /* Styles */
 const blueColor = "#209cee"
@@ -173,6 +174,9 @@ const IndexPage: React.FC = (): React.ReactElement => {
 
   return (
     <Layout>
+      <SEO title="Home" lang="ja">
+        <meta name="robots" content="noindex" />
+      </SEO>
       <Header />
       <section css={section}>
         <div css={field}>

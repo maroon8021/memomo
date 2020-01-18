@@ -1954,6 +1954,11 @@ babel-plugin-transform-react-remove-prop-types@^0.4.24:
   version "0.4.24"
   resolved "https://registry.yarnpkg.com/babel-plugin-transform-react-remove-prop-types/-/babel-plugin-transform-react-remove-prop-types-0.4.24.tgz#f2edaf9b4c6a5fbe5c1d678bfb531078c1555f3a"
 
+babel-plugin-transform-remove-console@^6.9.4:
+  version "6.9.4"
+  resolved "https://registry.yarnpkg.com/babel-plugin-transform-remove-console/-/babel-plugin-transform-remove-console-6.9.4.tgz#b980360c067384e24b357a588d807d3c83527780"
+  integrity sha1-uYA2DAZzhOJLNXpYjYB9PINSd4A=
+
 babel-preset-gatsby@^0.2.26:
   version "0.2.26"
   resolved "https://registry.yarnpkg.com/babel-preset-gatsby/-/babel-preset-gatsby-0.2.26.tgz#b27344c938cb5a20c81f4be134dde5f5b93ca256"
@@ -5074,6 +5079,11 @@ gatsby-plugin-react-helmet@^3.1.16:
   resolved "https://registry.yarnpkg.com/gatsby-plugin-react-helmet/-/gatsby-plugin-react-helmet-3.1.18.tgz#093b5d92e50dafa837ae97ac2672d79a96feb201"
   dependencies:
     "@babel/runtime" "^7.7.6"
+
+gatsby-plugin-remove-console@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-remove-console/-/gatsby-plugin-remove-console-0.0.2.tgz#384d467fb26d5345cdaae35ee4b1b83024f8aec4"
+  integrity sha512-luTmVMM7Iw9kClU9Rb9+iSbWeYu2zt9TUzD+n6jkBNPS564PhqtbsiYpiWkjvuy+REUPeMT4aX9N2qJO1GZQYw==
 
 gatsby-plugin-scss-typescript@^4.0.10:
   version "4.0.10"
