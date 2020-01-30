@@ -15,7 +15,7 @@ title: "Chromeで全画面スクリーンショット撮る方法"
 
 ### 事象
 
-`[Screenshot] Capture full size screenshot` でやっても画面全体が取れないときがある
+`[Screenshot] Capture full size screenshot` でやっても画面全体が取れないときがある。
 
 ### 解決策
 
