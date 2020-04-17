@@ -39,6 +39,6 @@ PHP Warning:  _cake_core_ cache was unable to write
 
 ↓
 
-生還
+生還。
 
 疲れた・・・笑
