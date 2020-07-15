@@ -185,7 +185,7 @@ const IndexPage: React.FC = (): React.ReactElement => {
               onChange={onChangeInput}
               css={inputInfo}
               type="text"
-              placeholder="Input text you want to search"
+              placeholder="Input text you want to search!"
               autoFocus
             />
           </div>
