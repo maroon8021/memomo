@@ -34,7 +34,7 @@
     "eslint-plugin-react": "^7.17.0",
     "gatsby-plugin-emotion": "^4.1.18",
     "gatsby-plugin-scss-typescript": "^4.0.10",
-    "node-sass": "^4.13.0",
+    "node-sass": "^7.0.0",
     "prettier": "^1.19.1",
     "wysiwyg.css": "^0.0.3"
   },
